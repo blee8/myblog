@@ -79,7 +79,15 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'mybolg'),
+       'NAME': os.path.join(BASE_DIR, 'myblog_db'),
+ #       'NAME': os.path.join(BASE_DIR, 'myblog23'),
+
+        #    'ENGINE': 'django.db.backends.postgresql',
+#    'NAME' : 'myblog',
+#    'USER' : 'blee',
+#    'PASSWORD' : '',
+#    'HOST' : 'localhost',
+#    'PORT' : '',
     }
 }
 
@@ -122,3 +130,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+
+LOGIN_REDIRECT_URL = '/'
